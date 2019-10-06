@@ -15,22 +15,17 @@
 -->
 
 <launch>
-  <remap from="scan" to="/velodyne/scan" />
-  <remap from="imu" to="/spatial_dual/imu/data" />
-
-  <param name="robot_description"
-    textfile="$(find cartographer_ros)/urdf/backpack_3d.urdf" />
-
-  <node name="robot_state_publisher" pkg="robot_state_publisher"
-    type="robot_state_publisher" />
 
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find cartographer_ros)/configuration_files
-          -configuration_basename backpack_3d.lua"
+          -configuration_basename ugv_2d.lua"
       output="screen">
-    <remap from="points2_1" to="horizontal_laser_3d" />
-    <remap from="points2_2" to="vertical_laser_3d" />
+
+    <remap from="scan" to="/velodyne/scan" />
+    <remap from="imu" to="/spatial_dual/imu/data" />
+    <remap from="fix" to="/spatial_dual/nav_fix" />
+    <remap from="odom" to="/ugv_controller/drive/odom" />
   </node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"

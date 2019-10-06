@@ -126,7 +126,7 @@ std::unique_ptr<carto::sensor::ImuData> SensorBridge::ToImuData(
   CHECK(sensor_to_tracking->translation().norm() < 1e-5)
       << "The IMU frame must be colocated with the tracking frame. "
          "Transforming linear acceleration into the tracking frame will "
-         "otherwise be imprecise.";
+         "otherwise be imprecise. translation matrix:" << sensor_to_tracking->translation();
   return carto::common::make_unique<carto::sensor::ImuData>(
       carto::sensor::ImuData{
           time,
