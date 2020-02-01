@@ -19,10 +19,10 @@ options = {
   map_builder = MAP_BUILDER,
   trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
-  tracking_frame = "base_link",
+  tracking_frame = "spatial_dual",
   published_frame = "base_link",
-  odom_frame = "base_link",
-  provide_odom_frame = true,
+  odom_frame = "odom",
+  provide_odom_frame = false,
   publish_frame_projected_to_2d = true,
   use_odometry = true,
   use_nav_sat = false,
@@ -43,6 +43,20 @@ options = {
 }
 
 MAP_BUILDER.use_trajectory_builder_2d = true
-TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 10
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 76
+TRAJECTORY_BUILDER_2D.min_range = 1.0
+TRAJECTORY_BUILDER_2D.use_imu_data = true
+
+print(TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight)
+
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 5
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 10
+
+POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 2.0
+POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1.0
+POSE_GRAPH.optimization_problem.odometry_translation_weight = 1.0
+POSE_GRAPH.optimization_problem.odometry_rotation_weight = 1.0
+
+-- POSE_GRAPH.optimise_every_n_nodes = 0 -- don't forget to remove this line
 
 return options

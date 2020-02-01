@@ -286,6 +286,8 @@ void Run(const std::string& bag_filename, const bool dump_timing) {
       num_imu_messages++;
       sum_imu_acceleration += ToEigen(msg->linear_acceleration).norm();
     } else if (message.isType<nav_msgs::Odometry>()) {
+        LOG_FIRST_N(INFO, 1)
+            << "checking odometry message";
       auto msg = message.instantiate<nav_msgs::Odometry>();
       time = msg->header.stamp;
       frame_id = msg->header.frame_id;

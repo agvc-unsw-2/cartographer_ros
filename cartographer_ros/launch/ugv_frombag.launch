@@ -18,7 +18,20 @@
 
   <param name="/use_sim_time" value="true" />
 
-  <include file="$(find cartographer_ros)/launch/ugv_2d.launch" />
+  <include file="$(find cartographer_ros)/launch/ugv_2d.launch"> 
+<!--
+	<remap from="/velodyne/scan" to="scan" />
+	<remap from="/spatial_dual/imu/data" to="imu" />
+	<remap from="/spatial_dual/nav_fix" to="fix" />
+	<remap from="/ugv_controller/drive/odom" to="odom" />
+-->
+
+	<remap from="scan" to="/velodyne/scan" />
+	<remap from="imu" to="/spatial_dual/imu/data" />
+	<remap from="fix" to="/spatial_dual/nav_fix" />
+	<remap from="odom" to="/ugv_controller/drive/odom" />
+
+  </include>
 
   <node name="rviz" pkg="rviz" type="rviz" required="true"
       args="-d $(find cartographer_ros)/configuration_files/demo_2d.rviz" />
