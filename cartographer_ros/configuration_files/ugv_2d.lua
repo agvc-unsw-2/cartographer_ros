@@ -20,10 +20,10 @@ options = {
   trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
   tracking_frame = "spatial_dual",
-  published_frame = "base_link",
-  odom_frame = "odom",
+  published_frame = "odom",
+  odom_frame = "asdf",
   provide_odom_frame = false,
-  publish_frame_projected_to_2d = true,
+  publish_frame_projected_to_2d = false,
   use_odometry = true,
   use_nav_sat = false,
   use_landmarks = false,
@@ -55,7 +55,7 @@ TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 10
 POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 2.0
 POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1.0
 POSE_GRAPH.optimization_problem.odometry_translation_weight = 1.0
-POSE_GRAPH.optimization_problem.odometry_rotation_weight = 1.0
+POSE_GRAPH.optimization_problem.odometry_rotation_weight = 0.0
 
 -- POSE_GRAPH.optimise_every_n_nodes = 0 -- don't forget to remove this line
 
