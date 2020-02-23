@@ -29,7 +29,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: PointCloud2
+    SyncSource: ""
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
@@ -60,129 +60,19 @@ Visualization Manager:
         All Enabled: true
         base_link:
           Value: true
-        box_goal:
+        d435_color_frame:
           Value: true
-        box_green_1:
+        d435_color_optical_frame:
           Value: true
-        box_green_2:
+        d435_depth_frame:
           Value: true
-        box_green_3:
+        d435_depth_optical_frame:
           Value: true
-        box_green_5:
-          Value: true
-        box_green_6:
-          Value: true
-        box_green_7:
-          Value: true
-        box_orange_1:
-          Value: true
-        box_orange_2:
-          Value: true
-        box_orange_3:
-          Value: true
-        box_orange_4:
-          Value: true
-        box_red_1:
-          Value: true
-        box_red_2:
-          Value: true
-        box_red_3:
-          Value: true
-        box_red_4:
-          Value: true
-        map:
-          Value: true
-        odom:
+        d435_link:
           Value: true
         spatial_dual:
           Value: true
-        stable_2:
-          Value: true
-        stable_40:
-          Value: true
-        stable_53:
-          Value: true
-        stable_54:
-          Value: true
-        stable_55:
-          Value: true
-        stable_56:
-          Value: true
-        stable_57:
-          Value: true
-        stable_58:
-          Value: true
-        stable_59:
-          Value: true
-        stable_60:
-          Value: true
-        stable_61:
-          Value: true
-        stable_62:
-          Value: true
-        stable_63:
-          Value: true
-        stable_64:
-          Value: true
-        stable_65:
-          Value: true
-        stable_66:
-          Value: true
-        stable_67:
-          Value: true
-        stable_68:
-          Value: true
-        stable_69:
-          Value: true
-        stable_70:
-          Value: true
-        stable_71:
-          Value: true
-        stable_72:
-          Value: true
-        stable_73:
-          Value: true
-        stable_74:
-          Value: true
-        stable_75:
-          Value: true
-        stable_76:
-          Value: true
-        stable_77:
-          Value: true
-        stable_78:
-          Value: true
-        stable_79:
-          Value: true
-        stable_80:
-          Value: true
-        stable_81:
-          Value: true
-        stable_82:
-          Value: true
-        stable_83:
-          Value: true
-        stable_84:
-          Value: true
-        ur_arm_base:
-          Value: true
-        ur_arm_base_link:
-          Value: true
-        ur_arm_ee_link:
-          Value: true
-        ur_arm_tool0:
-          Value: true
-        ur_arm_wrist_3_link:
-          Value: true
         velodyne:
-          Value: true
-        wheel_back_left:
-          Value: true
-        wheel_back_right:
-          Value: true
-        wheel_front_left:
-          Value: true
-        wheel_front_right:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -190,121 +80,7 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom:
-            base_link:
-              box_goal:
-                {}
-              spatial_dual:
-                {}
-              stable_2:
-                {}
-              stable_40:
-                {}
-              stable_53:
-                {}
-              stable_54:
-                {}
-              stable_55:
-                {}
-              stable_56:
-                {}
-              stable_57:
-                {}
-              stable_58:
-                {}
-              stable_59:
-                {}
-              stable_60:
-                {}
-              stable_61:
-                {}
-              stable_62:
-                {}
-              stable_63:
-                {}
-              stable_64:
-                {}
-              stable_65:
-                {}
-              stable_66:
-                {}
-              stable_67:
-                {}
-              stable_68:
-                {}
-              stable_69:
-                {}
-              stable_70:
-                {}
-              stable_71:
-                {}
-              stable_72:
-                {}
-              stable_73:
-                {}
-              stable_74:
-                {}
-              stable_75:
-                {}
-              stable_76:
-                {}
-              stable_77:
-                {}
-              stable_78:
-                {}
-              stable_79:
-                {}
-              stable_80:
-                {}
-              stable_81:
-                {}
-              stable_82:
-                {}
-              stable_83:
-                {}
-              stable_84:
-                {}
-              ur_arm_base_link:
-                ur_arm_base:
-                  {}
-              velodyne:
-                box_green_1:
-                  {}
-                box_green_2:
-                  {}
-                box_green_3:
-                  {}
-                box_green_5:
-                  {}
-                box_green_6:
-                  {}
-                box_green_7:
-                  {}
-                box_orange_1:
-                  {}
-                box_orange_2:
-                  {}
-                box_orange_3:
-                  {}
-                box_orange_4:
-                  {}
-                box_red_1:
-                  {}
-                box_red_2:
-                  {}
-                box_red_3:
-                  {}
-                box_red_4:
-                  {}
-              wheel_back_left:
-                {}
-              wheel_back_right:
-                {}
-              wheel_front_left:
-                {}
-              wheel_front_right:
-                {}
+        {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -317,6 +93,58 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ur_arm_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ur_arm_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ur_arm_ee_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ur_arm_forearm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ur_arm_shoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ur_arm_tool0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ur_arm_upper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ur_arm_wrist_1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ur_arm_wrist_2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ur_arm_wrist_3_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -332,16 +160,6 @@ Visualization Manager:
       Submap query service: /submap_query
       Submaps:
         All: true
-        Trajectory 0:
-          0.180: true
-          1.94: true
-          2.4: true
-          Value: true
-        Trajectory 1:
-          0.180: true
-          1.94: true
-          2.4: true
-          Value: true
       Topic: /submap_list
       Tracking frame: base_link
       Unreliable: false
@@ -381,8 +199,7 @@ Visualization Manager:
       Marker Topic: /trajectory_node_list
       Name: Trajectories
       Namespaces:
-        Trajectory 0: true
-        Trajectory 1: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -398,12 +215,7 @@ Visualization Manager:
       Marker Topic: /constraint_list
       Name: Constraints
       Namespaces:
-        Inter constraints, different trajectories: true
-        Inter constraints, same trajectory: true
-        Inter residuals, different trajectories: true
-        Inter residuals, same trajectory: true
-        Intra constraints: true
-        Intra residuals: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/Marker
@@ -411,7 +223,7 @@ Visualization Manager:
       Marker Topic: /ugv_controller/control_outputs_vis
       Name: Marker
       Namespaces:
-        visualisation_: true
+        {}
       Queue Size: 100
       Value: true
     - Angle Tolerance: 0.100000001
@@ -452,12 +264,12 @@ Visualization Manager:
       Class: rviz/Map
       Color Scheme: map
       Draw Behind: false
-      Enabled: true
+      Enabled: false
       Name: Map
       Topic: /navigation/og
       Unreliable: false
       Use Timestamp: false
-      Value: true
+      Value: false
     - Alpha: 0.699999988
       Class: rviz/Map
       Color Scheme: map
@@ -542,7 +354,7 @@ Visualization Manager:
     Background Color: 100; 100; 100
     Default Light: true
     Fixed Frame: map
-    Frame Rate: 30
+    Frame Rate: 5
   Name: root
   Tools:
     - Class: rviz/Interact
@@ -561,7 +373,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -0.125000298
+      Angle: -1.57000017
       Class: rviz/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
@@ -571,11 +383,11 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Scale: 67.7473679
+      Scale: 34.5425415
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz)
-      X: 5.07932138
-      Y: -4.17745304
+      X: -3.48757339
+      Y: 5.44434261
     Saved: ~
 Window Geometry:
   Displays:

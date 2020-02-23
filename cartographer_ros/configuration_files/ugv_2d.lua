@@ -48,6 +48,9 @@ TRAJECTORY_BUILDER_2D.min_range = 1.0
 TRAJECTORY_BUILDER_2D.use_imu_data = true
 
 print(TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight)
+print("num range data:")
+print(TRAJECTORY_BUILDER_2D.submaps.num_range_data)
+TRAJECTORY_BUILDER_2D.submaps.num_range_data = 22
 
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 5
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 10
